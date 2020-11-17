@@ -14,12 +14,12 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-3 bg-light">
                 <p class="search-header my-1">Search for a city:</p>
                     <div class="input-group mb-3">
-                        <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+                        <input id="cityNameInput" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button" id="search-button">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -29,41 +29,24 @@
                             </button>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary mb-3" id="clear-history">Clear History</button>
-                    <form id="history"></form>
                 </div>
             </div>
 
             <div class="col-9">
-                <div class="row mr-0">
-                    <div class="col-12 border border-dark m-3 rounded">
+                <div class="row border solid">
+                    <div class="col-12">
                         <div class="row">
-                            <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <i id="current-pic"></i>
+                            <div class="col">
+                                <h3 id="city-name" class="city-name align-middle"></h3>
+                                <img id="weatherIcon">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12">
                                 <p id="temperature"></p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
                                 <p id="humidity"></p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
                                 <p id="windSpeed"></p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12 d-flex">
                                 <p id="uvIndex"></p>
                             </div>
                         </div>
@@ -76,19 +59,15 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div id = forecast class="row">
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded show" style="display: inline;"></div>
                 </div>
             </div>
         </div>
     </div>
-     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
