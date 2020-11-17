@@ -1,0 +1,9 @@
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.search-header {
+    font-size: 25px;
+    font-weight: bold;
+}
